@@ -500,19 +500,16 @@ class VideoFragment : Fragment(),
 
 //            logger.info(TAG, "Video track removed, titleId: $tileId, attendeeId: ${tileState.attendeeId}")
             clickVideoButton = true
+            if (tileState.tileId == 0) {
+                frameLayout.getChildAt(0).visibility = View.INVISIBLE
+                frameLayout.visibility = View.INVISIBLE
+            }
             if (rosterViewModel.currentVideoTiles.values.size >1 ) {
-                if (tileState.tileId == 0) {
-                    frameLayout.getChildAt(0).visibility = View.INVISIBLE
-                    frameLayout.visibility = View.INVISIBLE
-                } else {
+                if (tileState.tileId != 0) {
                     showVideo.visibility = View.INVISIBLE
                 }
             } else {
                 showVideo.visibility = View.INVISIBLE
-                if (tileState.tileId == 0) {
-                    frameLayout.getChildAt(0).visibility = View.INVISIBLE
-                    frameLayout.visibility = View.INVISIBLE
-                }
             }
             audioVideo.unbindVideoView(tileId)
             if (rosterViewModel.currentVideoTiles.containsKey(tileId)) {
