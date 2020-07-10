@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginTop="16dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/item"
+        android:background="@drawable/patient_item_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingStart="10dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@mipmap/ic_doctor"
+                android:layout_width="58dp"
+                android:layout_height="56dp"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name"
+                android:layout_marginStart="7dp"
+                android:textStyle="bold"
+                android:text="山崎　佐"
+                android:textSize="14sp"
+                android:textColor="@color/color_18285C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/image"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/post"
+                android:paddingTop="2dp"
+                android:layout_marginStart="7dp"
+                android:textStyle="bold"
+                android:text="主任医師"
+                android:textSize="12sp"
+                android:textColor="@color/color_616983"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/image"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                tools:ignore="MissingConstraints" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/section"
+                android:paddingTop="2dp"
+                android:layout_marginStart="7dp"
+                android:textStyle="bold"
+                android:text="眼科"
+                android:textSize="12sp"
+                android:textColor="@color/color_616983"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/image"
+                app:layout_constraintTop_toBottomOf="@id/post"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hospital"
+                android:paddingTop="2dp"
+                android:layout_marginStart="7dp"
+                android:textStyle="bold"
+                android:text="大阪警察病院"
+                android:textSize="12sp"
+                android:textColor="@color/color_616983"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/illness"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorBackground"
+                android:text="近視"
+                android:textSize="10sp"
+                android:paddingEnd="7dp"
+                android:paddingStart="7dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/hospital"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description"
+                android:layout_marginTop="7dp"
+                android:text="オンラインサービス患者693人"
+                android:textSize="10sp"
+                android:paddingEnd="7dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/illness"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
