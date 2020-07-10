@@ -481,13 +481,6 @@ class VideoFragment : Fragment(),
                 }
             } else {
                 // For local video, should show it anyway
-//                if (tileState.tileId == 0) {
-//                    if (rosterViewModel.currentVideoTiles.values.size > 1) {
-//                        frameLayout.visibility = View.VISIBLE
-//                    }
-//                } else {
-//                    showVideo.visibility = View.VISIBLE
-//                }
                 if (tileState.isLocalTile) {
                     showVideoTile(tileState)
                 } else if (!rosterViewModel.currentVideoTiles.containsKey(tileState.tileId)) {
@@ -521,12 +514,6 @@ class VideoFragment : Fragment(),
                     frameLayout.visibility = View.INVISIBLE
                 }
             }
-//            if (tileState.tileId == 0) {
-//                frameLayout.getChildAt(0).visibility = View.INVISIBLE
-//                frameLayout.visibility = View.INVISIBLE
-//            } else {
-//                showVideo.visibility = View.INVISIBLE
-//            }
             audioVideo.unbindVideoView(tileId)
             if (rosterViewModel.currentVideoTiles.containsKey(tileId)) {
                 rosterViewModel.currentVideoTiles.remove(tileId)
